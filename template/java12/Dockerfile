@@ -47,6 +47,6 @@ ENV CLASSPATH="/home/app/entrypoint-1.0/lib/*"
 ENV fprocess="java -XX:+UseContainerSupport com.openfaas.entrypoint.App"
 EXPOSE 8080
 
-HEALTHCHECK --interval=5s CMD [ -e /tmp/.lock ] || exit 1
+HEALTHCHECK --interval=30s CMD [ -e /tmp/.lock ] || exit 1
 
 CMD ["fwatchdog"]
