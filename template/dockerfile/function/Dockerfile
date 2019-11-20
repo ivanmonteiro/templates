@@ -22,6 +22,6 @@ ENV write_debug="false"
 
 EXPOSE 8080
 
-HEALTHCHECK --interval=3s CMD [ -e /tmp/.lock ] || exit 1
+HEALTHCHECK --interval=15s CMD [ -e /tmp/.lock ] || exit 1
 
 CMD ["fwatchdog"]

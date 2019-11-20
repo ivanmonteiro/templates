@@ -49,5 +49,5 @@ USER app
 
 WORKDIR /home/app
 ENV fprocess="php index.php"
-HEALTHCHECK --interval=3s CMD [ -e /tmp/.lock ] || exit 1
+HEALTHCHECK --interval=15s CMD [ -e /tmp/.lock ] || exit 1
 CMD ["fwatchdog"]
